@@ -1,4 +1,9 @@
 # Almundo
+
+Para descargar el proyecto ejecute el siguiente comando.
+git clone https://github.com/cmonroyp/Almundo.git
+
+
 Complementos usados para el trabajo desde el cliente:
 
 1. Angular V 6.0.3
