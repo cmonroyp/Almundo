@@ -1,0 +1,135 @@
+@media only screen and (min-width: 200px) and (max-width: 800px) {
+    .hotelImage {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .infoHotel {
+        text-align: center !important;
+    }
+    .textPrice {
+        margin: 0 120px !important;
+    }
+}
+
+@media (min-width: 0px) {
+    .bdash {
+        transform: translateY(5px);
+        border: 0.5px dashed #000 !important;
+        margin-top: 20px !important;
+    }
+}
+
+@media (min-width: 420px) {
+    .bdash {
+        transform: translateY(5px);
+        border: 0.5px dashed #000 !important;
+    }
+}
+
+@media (min-width: 720px) {
+    .bdash {
+        transform: translateY(5px);
+        border: 0.5px dashed #000 !important;
+    }
+}
+
+@media (min-width: 800px) {
+    .bdash {
+        background: #ffffff !important;
+        border: 0.5px dashed #6c757d73 !important;
+        transform: translateY(100px) rotate(270deg);
+        width: 180px !important;
+        margin-left: -100px;
+        margin-top: 0px !important;
+    }
+}
+
+.card-title {
+    color: #004cffe0;
+}
+
+.amenities {
+    width: 6% !important;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.hotelImage {
+    max-width: 300px !important;
+    max-height: 200px !important;
+    display: block;
+    width: 90%;
+}
+
+.hotel-Card {
+    width: 100%;
+    margin: 10px;
+}
+
+.p-cardHotel {
+    padding: 10px;
+}
+
+.ec-stars-wrapper {
+    font-size: 0;
+    display: inline-block;
+}
+
+.starHotel {
+    display: inline-block;
+}
+
+.star {
+    text-decoration: none;
+    display: table;
+    font-size: 1.1rem;
+    color: #ffc107;
+    margin: 0px 6px 8px 2px;
+}
+
+.almundoButtom {
+    color: #ffffff !important;
+    background-color: #020692 !important;
+    background-image: none !important;
+    border-color: #ffffff00 !important;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.moneda {
+    line-height: 28px;
+    line-height: 1.75rem;
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.precio {
+    line-height: 28px;
+    line-height: 1.75rem;
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.contentprice {
+    color: #cb531c;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.pl-3,
+.px-3 {
+    padding-left: 0rem!important;
+}
+
+.cards-hotel {
+    transform: translateX(-2.0%)!important;
+}
+
+.image-container {
+    min-height: 200px;
+    background-size: cover;
+}

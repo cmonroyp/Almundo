@@ -1,0 +1,53 @@
+<form class="container-fluid">
+    <app-loading *ngIf="loading"></app-loading>
+
+    <div class="row">
+        <div class="col-md-3">
+            <app-search (hotelBuscar)='busquedaHoteles($event)' (searchByStar)="hotelByStar($event)"></app-search>
+        </div>
+
+        <div class="col-md-9 cards-hotel">
+            <div *ngFor="let h of arrayHoteles">
+                <div class="card hotel-Card">
+                    <div class="row p-cardHotel">
+                        <div class="col-md-4 image-container">
+                            <img class="card-img-top hotelImage" [src]="h.image  | images">
+                        </div>
+                        <div class=" col-md-5 px-3 infoHotel ">
+                            <div class="card-block px-3 ">
+                                <h5 class="card-title ">{{h.name}}</h5>
+                                <div>
+                                    <div class="starHotel" *ngFor="let star of arrayStar">
+                                        <div class="starHotel" *ngIf="star <= h.stars">
+                                            <i class="fa star fa-xs" [ngClass]="{'fa-star':star}"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="amenities" *ngFor="let amenities of h.amenities ">
+                                        <img [src]="amenities | amenities ">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 ">
+                            <div class="bdash"></div>
+                            <label class="textPrice text-center ">Precio por noche por habitación</label>
+                            <p class="contentprice ">
+                                <span class="moneda ">ARG</span> &nbsp;
+                                <span class="precio">{{h.price}}</span>
+                            </p>
+                            <button class="btn btn-primary almundoButtom" (click)="showDetailHotel(h.id)" data-toggle="modal" data-target="#exampleModalCenter">Ver hotel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</form>
+<div *ngIf="image">
+    <app-modal-image [image]="image"></app-modal-image>
+</div>

@@ -1,0 +1,43 @@
+<form #forma="ngForm" (ngSubmit)="busquedaHotel(forma)">
+    <div class="p-search">
+        <div class="card">
+            <label class="container"><strong>Filtros</strong></label>
+        </div>
+
+        <div class="card">
+            <label class="filterlbl"><strong><i class="fa fa-search"></i>Nombre del hotel</strong></label>
+            <i (click)="changeIconSearch()" [ngClass]="{'fa-sort-down':faSortSearch,'fa-sort-up':!faSortSearch}" class="fa fa-sort-up fa-align-right fa-lg" data-toggle="collapse" data-target="#collapseSearch" aria-expanded="false" aria-controls="collapseExample"></i>
+            <div class="row collapse show p-inpbtn" id="collapseSearch">
+                <div class="col-md-7 col-sm-12">
+                    <input class="form-control" type="text" placeholder="Ingrese el nombre del hotel" [(ngModel)]="txtBusqueda" name="txtBusqueda" #txtBusquedaNombre="ngModel" required>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                    <button type="submit" class="btn btn-outline-primary btn-block searchButton">Aceptar</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card">
+
+            <label class="filterlbl"><strong><i class="fa fa-star"></i> Estrellas</strong>
+                                    </label>
+            <i (click)="changeIconStar()" [ngClass]="{'fa-sort-down':faSortStar,'fa-sort-up':!faSortStar}" class="fa fa-sort-up fa-align-right fa-lg" data-toggle="collapse" data-target="#collapseStart" aria-expanded="false" aria-controls="collapseExample"></i>
+
+
+            <div class="form-group collapse show starSearch" id="collapseStart">
+                <input type="checkbox" [checked]="check_all" (change)="checkall($event)" />
+                <label class="startlbl"><strong>Todas las estrellas</strong></label>
+                <div class="form-inline" *ngFor="let item of arrayStar;let idx= index">
+                    <input type="checkbox" (change)="setStar($event,item)" />
+                    <div class="starfilter form-inline">
+                        <div *ngFor="let star of item.star">
+                            <i class="fa start" [ngClass]="{'fa-star':star}"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
